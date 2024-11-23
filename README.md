@@ -116,12 +116,16 @@ Here are the available API endpoints for interacting with the application:
   - Creates a new car.
   - **Request Body**:
     ```json
-    {
-      "name": "Car Name",
-      "brand": "Car Brand",
-      "quantity": 10,
-      "price": 50000
-    }
+      {
+        "brand": "Toyota",
+        "model": "Camry",
+        "year": 2024,
+        "price": 25000,
+        "category": "Sedan",
+        "description": "A reliable family sedan with modern features.",
+        "quantity": 50,
+        "inStock": true
+      }
     ```
 
 - **GET /api/cars**
@@ -176,55 +180,7 @@ Here are the available API endpoints for interacting with the application:
     }
     ```
 
-### 7. Example Data
 
-#### Create a Car
-
-```bash
-curl -X POST http://localhost:5000/api/cars -H "Content-Type: application/json" -d '{"name": "Honda Civic", "brand": "Honda", "quantity": 10, "price": 20000}'
-```
-
-#### Create an Order
-
-```bash
-curl -X POST http://localhost:5000/api/orders -H "Content-Type: application/json" -d '{"email": "user@example.com", "car": "carId", "quantity": 2, "totalPrice": 40000}'
-```
-
-#### Get All Cars
-
-```bash
-curl http://localhost:5000/api/cars
-```
-
-#### Get Revenue
-
-```bash
-curl http://localhost:5000/api/orders/revenue
-```
-
-### 8. Deployment to Vercel
-
-To deploy the application to Vercel:
-
-1. Install the [Vercel CLI](https://vercel.com/docs/cli) globally:
-
-   ```bash
-   npm install -g vercel
-   ```
-
-2. Login to Vercel:
-
-   ```bash
-   vercel login
-   ```
-
-3. Deploy the project:
-
-   ```bash
-   vercel
-   ```
-
-4. Follow the prompts to complete the deployment process.
 
 ### 9. Directory Structure
 
