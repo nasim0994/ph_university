@@ -207,9 +207,3 @@ Here are the available API endpoints for interacting with the application:
 /vercel.json
 /.env
 ```
-
-### 10. Troubleshooting
-
-- **Database Connection Error**: Ensure your MongoDB URL is correct in the `.env` file.
-- **ESLint Errors**: If linting issues are found, run `npm run lint:fix` to automatically fix them.
-- **API Not Found**: Ensure the route you are calling exists and the server is running.
