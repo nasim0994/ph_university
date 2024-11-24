@@ -58,19 +58,20 @@ const createOrderService = async (data: IOrder) => {
 const calculateRevenueService = async () => {
   const revenueData = await Order.aggregate([
     {
-      $project: {
-        totalRevenue: { $multiply: ['$totalPrice', '$quantity'] },
+      $group: {
+        _id: null,
+        totalRevenue: { $sum: '$totalPrice' },
       },
     },
     {
-      $group: {
-        _id: null,
-        totalRevenue: { $sum: '$totalRevenue' },
+      $project: {
+        _id: 0,
+        totalRevenue: 1,
       },
     },
   ]);
 
-  return revenueData.length > 0 ? revenueData[0].totalRevenue : 0;
+  return revenueData.length > 0 ? revenueData[0] : 0;
 };
 
 export const orderService = {
