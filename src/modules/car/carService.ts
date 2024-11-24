@@ -7,15 +7,18 @@ const createCar = async (data: Car) => {
 };
 
 const getAllCars = async (searchTerm: string) => {
-  const regex = new RegExp(searchTerm, 'i');
+  let query = {};
 
-  const query = {
-    $or: [
-      { category: { $regex: regex } },
-      { brand: { $regex: regex } },
-      { model: { $regex: regex } },
-    ],
-  };
+  if (searchTerm) {
+    const regex = new RegExp(`^${searchTerm}$`, 'i');
+    query = {
+      $or: [
+        { category: { $regex: regex } },
+        { brand: { $regex: regex } },
+        { model: { $regex: regex } },
+      ],
+    };
+  }
 
   const cars = await CarModel.find(query);
   return cars;
