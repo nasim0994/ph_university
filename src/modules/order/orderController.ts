@@ -8,7 +8,7 @@ const createOrder = async (req: Request, res: Response, next: NextFunction) => {
 
     const result = await orderService.createOrderService(data);
 
-    return res.status(200).json({
+    res.status(200).json({
       status: true,
       message: 'Order placed successfully',
       data: result,
@@ -26,7 +26,7 @@ const calculateRevenue = async (
   try {
     const result = await orderService.calculateRevenueService();
 
-    return res.status(200).json({
+    res.status(200).json({
       status: true,
       message: 'Revenue calculated successfully',
       data: result,

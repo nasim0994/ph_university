@@ -1,6 +1,6 @@
 import express from 'express';
-import { orderController } from './orderController';
 const Router = express.Router();
+import { orderController } from './orderController';
 
 Router.post('/', orderController.createOrder);
 Router.get('/revenue', orderController.calculateRevenue);
