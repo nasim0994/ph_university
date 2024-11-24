@@ -207,3 +207,9 @@ Here are the available API endpoints for interacting with the application:
 /vercel.json
 /.env
 ```
+
+
+📺 Project Walkthrough Video
+![Watch the video](https://img.youtube.com/vi/LTkTJsm92Tk/0.jpg)  
+
+🎥 **Watch Now:** [Project Walkthrough Video](https://www.youtube.com/watch?v=LTkTJsm92Tk)
