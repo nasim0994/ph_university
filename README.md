@@ -1,40 +1,6 @@
-### Student ID: WEB6-0075 - Assignment Set:3
-
-# Express & MongoDB API for Car and Order Management
-
-This project is a Node.js application built with Express and MongoDB. It provides APIs for managing cars and orders. The application includes various routes for CRUD operations, revenue calculation, and error handling.
-
-## Features
-
-- **Car Management**:
-  - Create a new car.
-  - Get a list of all cars.
-  - Get a car by ID.
-  - Update a car.
-  - Delete a car.
-
-
-- **Order Management**:
-  - Create an order.
-  - Calculate total revenue from all orders.
-
-- **Error Handling**:
-  - Custom error handler to catch and respond to errors across the application.
-
-- **API Documentation**:
-  - API responses are structured with success flags and error handling.
-
-
-## Setup Instructions
-
-### 1. Clone the Repository
-
-Start by cloning the repository to your local machine:
-
-```bash
-git clone https://github.com/nasim0994/level2_assignment2.git
-cd level2_assignment2
-```
+## 1. Project Description
+  # PH University Management Projec
+  # Tecnology: NodeJs,ExpressJs,Typescript,Mongoose,MongoDB
 
 ### 2. Install Dependencies
 
@@ -105,100 +71,12 @@ To format the code according to the predefined style guide, run:
 npm run format
 ```
 
-### 6. API Endpoints
-
-Here are the available API endpoints for interacting with the application:
-
-#### **Car Management Endpoints**
-
-- **POST /api/cars**
-
-  - Creates a new car.
-  - **Request Body**:
-    ```json
-      {
-        "brand": "Toyota",
-        "model": "Camry",
-        "year": 2024,
-        "price": 25000,
-        "category": "Sedan",
-        "description": "A reliable family sedan with modern features.",
-        "quantity": 50,
-        "inStock": true
-      }
-    ```
-
-- **GET /api/cars**
-
-  - Fetches a list of all cars.
-
-- **GET /api/cars/:id**
-
-  - Fetches a single car by its ID.
-
-- **PUT /api/cars/:id**
-
-  - Updates a car's details.
-  - **Request Body**:
-    ```json
-    {
-      "name": "Updated Car Name",
-      "brand": "Updated Car Brand",
-      "quantity": 15,
-      "price": 55000
-    }
-    ```
-
-- **DELETE /api/cars/:id**
-  - Deletes a car by its ID.
-
-#### **Order Management Endpoints**
-
-- **POST /api/orders**
-
-  - Creates a new order.
-  - **Request Body**:
-    ```json
-    {
-      "email": "user@example.com",
-      "car": "carId",
-      "quantity": 2,
-      "totalPrice": 100000
-    }
-    ```
-
-- **GET /api/orders/revenue**
-  - Calculates and returns the total revenue from all orders.
-  - **Response**:
-    ```json
-    {
-      "message": "Revenue calculated successfully",
-      "status": true,
-      "data": {
-        "totalRevenue": 810000
-      }
-    }
-    ```
-
-
-
 ### 9. Directory Structure
 
 ```
 /src
   /modules
-    /car
-      carInterface.ts
-      carController.ts
-      carService.ts
-      carModel.ts
-      carRoute.ts
-    /order
-      orderInterface.ts
-      orderController.ts
-      orderService.ts
-      orderModel.ts
-      orderRoute.ts
+    ...
   /config
     index.ts
   app.ts
@@ -207,9 +85,3 @@ Here are the available API endpoints for interacting with the application:
 /vercel.json
 /.env
 ```
-
-
-📺 Project Walkthrough Video
-![Watch the video](https://img.youtube.com/vi/LTkTJsm92Tk/0.jpg)  
-
-🎥 **Watch Now:** [Project Walkthrough Video](https://www.youtube.com/watch?v=LTkTJsm92Tk)

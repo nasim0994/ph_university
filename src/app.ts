@@ -1,8 +1,7 @@
-import express, { Application, NextFunction, Request, Response } from 'express';
+import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
-import { carRoute } from './modules/car/carRoute';
-import { orderRoute } from './modules/order/orderRoute';
 import config from './config';
+import router from './routes/intex';
 const app: Application = express();
 
 // Middleware
@@ -14,8 +13,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // use Routes
-app.use('/api/cars', carRoute);
-app.use('/api/orders', orderRoute);
+app.use('/api', router);
 
 // all undefined routes
 app.all('*', (req: Request, res: Response) => {
@@ -26,7 +24,7 @@ app.all('*', (req: Request, res: Response) => {
 });
 
 // global error handler
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+app.use((err: any, req: Request, res: Response) => {
   if (err) {
     res.status(400).json({
       success: false,
