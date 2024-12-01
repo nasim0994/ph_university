@@ -1,7 +1,7 @@
-export const TUser = {
-  id: 'string',
-  name: 'string',
-  email: 'string',
-  password: 'string',
-  role: 'string',
+export type TUser = {
+  id: string;
+  password: string;
+  role: string;
+  status: boolean;
+  isDeleted: boolean;
 };

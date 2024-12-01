@@ -1,6 +1,6 @@
-## 1. Project Description
-  # PH University Management Projec
-  # Tecnology: NodeJs,ExpressJs,Typescript,Mongoose,MongoDB
+### 1. Project Description
+  ### PH University Management Project
+  ### Tecnology: NodeJs,ExpressJs,Typescript,Mongoose,MongoDB
 
 ### 2. Install Dependencies
 
